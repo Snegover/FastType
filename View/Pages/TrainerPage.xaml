@@ -1,0 +1,71 @@
+﻿<Page x:Class="FastType_Proskurin_Sideleva.View.Pages.TrainerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FastType_Proskurin_Sideleva.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="690" d:DesignWidth="1244"
+      Title="TrainerPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="6*" />
+        </Grid.RowDefinitions>
+
+        <TextBox Text="напечатай этот текст и узнай свою скорость печати"/>
+
+        <Border Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Content="ё"
+                        Style="{StaticResource TrainerButtonGray}"/>
+                <Button Content="1" Grid.Column="1"
+                        Style="{StaticResource TrainerButtonGreen}"/>
+                <Button Content="2" Grid.Column="2"
+                        Style="{StaticResource TrainerButtonGreen}"/>
+                <Button Content="3" Grid.Column="3"
+                        Style="{StaticResource TrainerButtonBlue}"/>
+                <Button Content="4" Grid.Column="4"/>
+                <Button Content="5" Grid.Column="5"/>
+                <Button Content="6" Grid.Column="6"/>
+                <Button Content="7" Grid.Column="7"/>
+                <Button Content="8" Grid.Column="8"/>
+                <Button Content="9" Grid.Column="9" 
+                        Style="{StaticResource TrainerButtonBlue}"/>
+                <Button Content="0" Grid.Column="10"
+                        Style="{StaticResource TrainerButtonGreen}"/>
+                <Button Content="-" Grid.Column="11"
+                        Style="{StaticResource TrainerButtonGreen}"/>
+                <Button Content="=" Grid.Column="12"
+                        Style="{StaticResource TrainerButtonGreen}"/>
+                <Button Content="Backspace" Grid.Column="13"
+                        Style="{StaticResource TrainerButtonGray}"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

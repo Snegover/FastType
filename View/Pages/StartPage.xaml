@@ -1,0 +1,106 @@
+﻿<Page x:Class="FastType_Proskurin_Sideleva.View.Pages.StartPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FastType_Proskurin_Sideleva.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="690" d:DesignWidth="1244"
+      Title="StartPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width=".05*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <Image Width="400"
+               VerticalAlignment="Bottom">
+            <Image.Style>
+                <Style TargetType="Image">
+                    <Setter Property="Source" Value="/Resources/Images/finger.png"/>
+
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=StartTypingBtn, Path=IsMouseOver}"
+                                     Value="true">
+                            <Setter Property="Source" Value="/Resources/Images/finger-2.png"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
+
+        <StackPanel Grid.Column="2">
+            <TextBlock Text="Печатай быстрее"
+                       FontSize="52"
+                       Foreground="White"/>
+
+            <TextBlock Text="Научись быстро печатать с клавиатурным тренажёром FastType. А уроки слепой печати помогут тебе использовать все 10 пальцев."
+                       FontSize="23"
+                       Margin="0 15"
+                       Foreground="#7fffffff"
+                       TextWrapping="Wrap"/>
+
+            <Button Content="Начать печатать"
+                    Name="StartTypingBtn"
+                    Style="{StaticResource ActionButton}"/>
+        </StackPanel>
+
+        <Border Grid.Row="1"
+                Grid.ColumnSpan="3"
+                Background="White"
+                CornerRadius="12"/>
+
+        <StackPanel Grid.Row="1"
+                    Margin="40 30">
+            <TextBlock Text="Научиться печатать вслепую"
+                       FontSize="30"
+                       Foreground="#28a4e8"/>
+
+            <TextBlock Text="Ускорь прогресс обучения слепой печати с клавиатурным тренажером FastType и развивай ценные навыки набора текста!"
+                       FontSize="23"
+                       Foreground="#3c3c3c"
+                       TextWrapping="Wrap"
+                       Margin="0 20"/>
+
+            <TextBlock FontSize="23">
+                <Hyperlink Foreground="#28a4e8">
+                    Узнай, как печатать вслепую >
+                </Hyperlink>
+            </TextBlock>
+        </StackPanel>
+
+        <Border Grid.Row="1"
+                Grid.Column="1"
+                BorderThickness="1 0 0 0"
+                BorderBrush="#ccc"
+                Height="150"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+
+        <StackPanel Grid.Row="1"
+                    Margin="40 30"
+                    Grid.Column="2">
+            <TextBlock Text="Пройдите тест скорости печати"
+                       FontSize="30"
+                       Foreground="#28a4e8"/>
+
+            <TextBlock Text="Узнай свою скорость печати. Получи один из статусов и удиви друзей и знакомых!"
+                       FontSize="23"
+                       Foreground="#3c3c3c"
+                       TextWrapping="Wrap"
+                       Margin="0 20"/>
+
+            <TextBlock FontSize="23">
+                <Hyperlink Foreground="#28a4e8">
+                    Перейти к тесту скорости печати >
+                </Hyperlink>
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>
